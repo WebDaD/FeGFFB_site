@@ -1,0 +1,90 @@
+@import "palette.less";
+@import "navbar.less";
+@import "share-buttons.less";
+
+body {
+  padding-top: 50px;
+}
+/* fitting bg-colos btns */
+.btn-primary {
+  background-color: @primaryColor;
+  color: @textPrimaryColor;
+}
+.btn-primary:hover {
+  background-color: @accentColor;
+  color: @secondaryTextColor;
+}
+.ghost-button {
+  background-color: @accentColor;
+}
+.ghost-button:hover {
+  background-color: @primaryColor;
+  color: @accentColor;
+}
+
+/* row grid error */
+.row.row-grid [class*="col-"] {
+    margin-top: 15px;
+}
+
+/* up button */
+#up {
+  position: fixed;
+  bottom:60px;
+  right:10px;
+  z-index:999;
+}
+@media (min-width: 768px) {
+  #up {
+    bottom:10px;
+  }
+}
+
+/* navbar mobile extensions */
+.nav>li {
+  text-align: right;
+}
+@media (max-width: 767px) {
+  .nav>li a {
+    font-size: 26px;
+  }
+}
+/* color to inlines */
+em {
+  color: @accentColor;
+}
+strong {
+  color: @primaryColor;
+}
+hr {
+  border-color: @primaryColor;
+}
+h1 {
+  color: @primaryColor;
+}
+
+
+/* better typhography */
+body {
+  font-family: 'Helvetica Neue';
+  letter-spacing: -.01em;
+}
+p, figcaption, td, li, a, label, .alert {
+  font-size: 20px;
+	font-size: 1.8rem;
+  font-style: normal;
+	font-weight: 400;
+  line-height: 1.4;
+  word-wrap: normal;
+}
+
+
+/* Footer */
+footer {
+  background-color: #212121;
+  color: #f0f0f0 !important;
+  width: 100%;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+

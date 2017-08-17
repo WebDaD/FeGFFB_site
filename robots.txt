@@ -1,0 +1,3 @@
+Sitemap: http://feg-ffb.de/sitemap.xml
+User-agent: *
+Disallow:

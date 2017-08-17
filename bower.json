@@ -1,0 +1,29 @@
+{
+  "name": "Site-FeG-FFB",
+  "description": "A simple one-pag App",
+  "main": "index.pug",
+  "keywords": [
+    "feg-ffb",
+    "one-page",
+    "bootstrap",
+    "info",
+    "form",
+    "contact",
+    "angular"
+  ],
+  "authors": [
+    "Dominik Sigmund"
+  ],
+  "license": "The Unlicense",
+  "homepage": "http://www.webdad.eu",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome":"*",
+    "angular": "*",
+    "angular-bootstrap": "*",
+    "angular-route": "*",
+    "angular-sanitize": "*",
+    "offline":"*"
+  }
+}

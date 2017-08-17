@@ -1,0 +1,34 @@
+doctype html
+html(lang='de')
+  head
+    include header.pug
+  body(itemscope itemtype="http://schema.org/Organization")
+    include up.pug
+    include share-buttons.pug
+    include navbar.pug
+    #top
+      .container
+        .row
+          .col-sm-4
+            img.img-responsive.lazy(data-original='/images/android-chrome-512x512.png' alt="WebDaD - Web Development and Design Logo" itemprop="logo")
+          .col-sm-8.text-right
+            h1
+              span WebDaD
+              small  Web Development and Design
+            p Ob Webseiten, Anwendungen oder Service:
+            p Wir kümmern uns um Ihren Web-Auftritt.
+            a.btn.btn-primary.btn-lg.btn-block.ghost-button.no-print(href="#kontakt" role="button") Jetzt kostenloses Angebot anfordern!
+    .container
+      h1.target#ueber_uns Über uns
+      include assets/chapters/about_us.pug
+      h1.page-break-before.target#kontakt Kontakt
+      include assets/chapters/contact.pug
+      h1.page-break-before.target#referenzen Referenzen
+      include assets/chapters/referenzen.pug
+      h1.page-break-before.target#service Service
+      include assets/chapters/service.pug
+      h1.page-break-before.target#apps Apps
+      include assets/chapters/apps.pug
+      include footer.pug
+    script(src="js/main.js")
+    script(src='https://www.google.com/recaptcha/api.js')
