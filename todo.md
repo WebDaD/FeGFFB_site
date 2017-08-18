@@ -13,13 +13,25 @@
 
 * sitemap
 * htaccess (redirect eg predigten.html > feg-ffb.de/!#predigten)
-* angualr-controller
 * abgualr-svc
     * plus debug one with mock promises
 * angualr-templates
 * keys
 
 * add material (bootstrap)
+
+
+* predigten
+* predigt
+* termine
+* termin
+* news
+* new
+* about_us
+* kontakt
+* losungen (Jahr, Monat, Woche, Tag)
+* losung
+* 404 (search)
 
 * multilanguages
 * langauge selector (cookie based)

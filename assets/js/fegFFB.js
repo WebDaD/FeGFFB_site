@@ -13,15 +13,30 @@
           controllerAs: 'ctrl',
           templateUrl: 'templates/predigten'
         })
+        .when('/predigten/:slug', {
+          controller: 'fegFFB-Predigt',
+          controllerAs: 'ctrl',
+          templateUrl: 'templates/predigt'
+        })
         .when('/termine', {
           controller: 'fegFFB-Termine',
           controllerAs: 'ctrl',
           templateUrl: 'templates/termine'
         })
+        .when('/termine/:slug', {
+          controller: 'fegFFB-Termin',
+          controllerAs: 'ctrl',
+          templateUrl: 'templates/termin'
+        })
         .when('/news', {
           controller: 'fegFFB-News',
           controllerAs: 'ctrl',
           templateUrl: 'templates/news'
+        })
+        .when('/news/:slug', {
+          controller: 'fegFFB-New',
+          controllerAs: 'ctrl',
+          templateUrl: 'templates/new'
         })
         .when('/ueber_uns', {
           controller: 'fegFFB-UeberUns',
@@ -32,6 +47,11 @@
           controller: 'fegFFB-Losungen',
           controllerAs: 'ctrl',
           templateUrl: 'templates/losungen'
+        })
+        .when('/losungen/:slug', {
+          controller: 'fegFFB-Losung',
+          controllerAs: 'ctrl',
+          templateUrl: 'templates/losung'
         })
         .when('/kontakt', {
           controller: 'fegFFB-Kontakt',
@@ -48,6 +68,13 @@
           controllerAs: 'ctrl',
           templateUrl: 'templates/datenschutz'
         })
-        .otherwise({ redirectTo: '/home' })
+        .when('/404', {
+          controller: 'fegFFB-404',
+          controllerAs: 'ctrl',
+          templateUrl: 'templates/404'
+        })
+        .otherwise({ 
+          redirectTo: '/404' 
+        })
     }])
 }())
