@@ -11,14 +11,19 @@
 
 * maintanace (external tool)
 
+* service people.feg.de (people API)
+
+* create directives (eg cards, author) https://www.sitepoint.com/practical-guide-angularjs-directives/
 * sitemap
 * htaccess (redirect eg predigten.html > feg-ffb.de/!#predigten)
 * abgualr-svc
     * plus debug one with mock promises
 * angualr-templates
 * keys
+    * php config into main, write during build)
 
 * add material (bootstrap)
+* manifest
 
 
 * predigten
@@ -27,7 +32,7 @@
 * termin
 * news
 * new
-* about_us
+* about_us (from all the static texts, using headlines and an arcodeion)
 * kontakt
 * losungen (Jahr, Monat, Woche, Tag)
 * losung
@@ -43,5 +48,5 @@
 
 * facebook-messenger
 * Notifications
-* RSS-Feed (combines other feeds)
+* RSS-Feed (combines other feeds) https://gist.github.com/smajda/204194
 * offline

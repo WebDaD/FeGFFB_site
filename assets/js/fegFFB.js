@@ -28,20 +28,20 @@
           controllerAs: 'ctrl',
           templateUrl: 'templates/termin'
         })
-        .when('/news', {
-          controller: 'fegFFB-News',
+        .when('/articles', {
+          controller: 'fegFFB-Articles',
           controllerAs: 'ctrl',
-          templateUrl: 'templates/news'
+          templateUrl: 'templates/articles'
         })
-        .when('/news/:slug', {
-          controller: 'fegFFB-New',
+        .when('/articles/:slug', {
+          controller: 'fegFFB-Article',
           controllerAs: 'ctrl',
-          templateUrl: 'templates/new'
+          templateUrl: 'templates/article'
         })
         .when('/ueber_uns', {
           controller: 'fegFFB-UeberUns',
           controllerAs: 'ctrl',
-          templateUrl: 'templates/ueber_uns'
+          templateUrl: 'templates/ueber_uns' // TODO: use a function here, using the language cookie
         })
         .when('/losungen', {
           controller: 'fegFFB-Losungen',
