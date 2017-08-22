@@ -16,6 +16,8 @@
 * service termine.feg.de
 * service articles.feg.de
 * service losungen.feg.de
+* service media.feg.de
+* service bible.feg.de
 --> RAML Doku!
 
 Überall: Schema.org snippets, microdata
@@ -38,6 +40,7 @@ Verknüpfung mit amen.de?
 * image watermarking
 * notifications
 * add to homescreen
+* https://github.com/anein/angular-lazy-image
 
 * predigten
 * predigt
