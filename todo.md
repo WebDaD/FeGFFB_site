@@ -17,7 +17,7 @@
 * service articles.feg.de
 * service losungen.feg.de
 * service media.feg.de
-* service bible.feg.de
+* service bible.feg.de https://github.com/scrollmapper/bible_databases (als Grundlage)
 --> RAML Doku!
 
 Überall: Schema.org snippets, microdata

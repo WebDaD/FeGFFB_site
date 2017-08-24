@@ -21,3 +21,6 @@
 * Über Uns
     * Unterseiten (zB Faqs, ...)
 * Kontakt
+
+## Struktur
+![Struktur](out/services/services@1-19.png)
