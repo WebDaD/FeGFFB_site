@@ -1,0 +1,20 @@
+.spinner(ng-show="ctrl.loading")
+div(ng-show="!ctrl.loading")
+    // Image (Full Width)
+    h1 {{ctrl.predigt.title}}
+    // date, preacher
+    // audio player
+    div(ng-bind-html="ctrl.predigt.intro")
+    hr
+    .col-md-6
+        // data here (as table)
+    .col-md-6
+        // preacher image big
+    h2 Lesung
+    div(ng-bind-html="ctrl.predigt.bible.text")
+    hr
+    h2 Text
+    div(ng-bind-html="ctrl.predigt.text")
+    hr
+    // tags
+    // related

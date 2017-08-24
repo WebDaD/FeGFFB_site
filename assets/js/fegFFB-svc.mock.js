@@ -52,7 +52,10 @@
                 "text":"<h2>Überschrift</h2><p>Some Text...</p>",
                 "mp3":"http://feg-ffb.de/wp-content/uploads/2017/08/20170820_Predigt.mp3",
                 "tags":"tag1, tag2",
-                "bible":"Gen22,1-14",
+                "bible": {
+                  "code":"Gen22,1-14",
+                  "text":"Text...Text..."
+                },
                 "related":[
                   {
                     "slug":"predigt-nummer-2",
