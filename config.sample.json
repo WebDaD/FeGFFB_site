@@ -1,0 +1,42 @@
+{
+    "gCaptcha": {
+        "server":"XXX",
+        "client":"XXX"
+    },
+    "keys": {
+        "yandex":"XXX",
+        "google":"XXX",
+        "bing":"XXX"
+    },
+    "control": {
+        "debug":true,
+        "publish":"test"
+    },
+    "ftp" : {
+        "test": {
+            "host":"",
+            "port":"23",
+            "user":"",
+            "password":"",
+            "directoy":"test/"
+        },
+        "live": {
+            "host":"",
+            "port":"23",
+            "user":"",
+            "password":"",
+            "directoy":"/"
+        }
+    },
+    "data": {
+        "url":"http://test.feg-ffb.de",
+        "author": "Dominik Sigmund",
+        "publisher": "FeG Fürstenfeldbruck",
+        "rights":"FeG Fürstenfeldbruck",
+        "title": {
+            "short":"FeG Fürstenfeldbruck",
+            "long":"Freie evangelische Gemeinde Fürstenfeldbruck - Aus Liebe zu Jesus für unseren Ort"
+        },
+        "keywords": "FeG, frei, evangelisch, Gemeinde, Fürstenfeldbruck, FFB, Jesus, Bibel, Losungen"
+    }
+}

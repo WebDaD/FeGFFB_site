@@ -1,3 +1,3 @@
 <?php
-$secret = '';
+$secret = '%%%gCaptchaServerSecret%%%';
 ?>

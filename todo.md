@@ -1,37 +1,47 @@
-* README (pages, urls, ...)
-* build
-    * + dbeug switch
-* publish.js
-    * test switch
-    * ftp
-* index
-    * links in share-buttons
-    * header
-    * scripts
-
 * maintanace (external tool)
 
+(Here only the ones we need)
 * service people.feg.de (people API)
+    * GET /people/:slug <- Details as json
 * service predigten.feg.de
+    * GET /predigten <- List of slugs as json
+    * GET /predigten/:slug <- Details as json
+    * GET /predigten/latest <- Details as json of newest
 * service termine.feg.de
+    * GET /termine <- List of slugs as json
+    * GET /termine/:slug <- Details as json
+    * GET /termine/latest <- Details as json of newest
 * service articles.feg.de
+    * GET /articles <- List of slugs as json
+    * GET /articles/:slug <- Details as json
+    * GET /articles/latest <- Details as json of newest
 * service losungen.feg.de
+    * GET /losungen/ alle json
+    * GET /losungen/:date tag,woche,monat,jahr für tag
+    * GET /losungen/today tag,woche,monat,jahr for today
+    * GET /losungen/jahr Alles jahreslosungen
+    * GET /losungen/jahr/:jahr jahreslosung
+    * GET /losungen/monat/:jahr Alles monatslosungen für Jahr
+    * GET /losungen/monat/:jahr/:monat monatslosung
+    * GET /losungen/woche/:jahr/:monat Alles wochenlosungen für Monat
+    * GET /losungen/woche/:jahr/:monat/:woche wochenlosung
+    * GET /losungen/tag/:date tageslosung 
 * service media.feg.de
+    * GET /media/:image?width=:width&height=:height Bild mit Höhe breite
 * service bible.feg.de https://github.com/scrollmapper/bible_databases (als Grundlage)
+    * GET /bible/:code Text as JSON
 --> RAML Doku!
-
 Überall: Schema.org snippets, microdata
 
-Verknüpfung mit amen.de?
 
 * create directives (eg cards, author) https://www.sitepoint.com/practical-guide-angularjs-directives/
 * sitemap
+* For html loading https://docs.angularjs.org/api/ng/service/$sce
 * htaccess (redirect eg predigten.html > feg-ffb.de/!#predigten)
 * abgualr-svc
-    * plus debug one with mock promises
+    * plus debug one with mock promises (link in with debug-switch)
 * angualr-templates
-* keys
-    * php config into main, write during build)
+* mark if DEBUG && TEST (small icons top right)
 * config on startup http://jacopretorius.net/2016/09/loading-configuration-data-on-startup-with-angular.html
 * add material (bootstrap)
 * manifest
@@ -71,6 +81,7 @@ Verknüpfung mit amen.de?
     * https://blog.feedly.com/10-ways-to-optimize-your-feed-for-feedly/
 * offline
 
+* keys from old site
 * pagespeed insights
 * facebook card
 * twitter card
