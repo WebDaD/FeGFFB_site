@@ -100,7 +100,10 @@ html(lang='de', ng-app='feGFFB')
       script(src='js/angular-sanitize.js')
       script(src='js/ui-bootstrap-tpls.min.js')
       script(src='js/fegFFB.js')
-      script(src='js/fegFFB-svc.js')
+      if control.mockapi
+        script(src='js/fegFFB-svc-mock.js')
+      else
+        script(src='js/fegFFB-svc.js')
       script(src='js/fegFFB-dir.js')
       script(src='js/controllers/404-controller.js')
       script(src='js/controllers/article-controller.js')

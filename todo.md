@@ -1,5 +1,3 @@
-* maintanace (external tool)
-
 (Here only the ones we need)
 * service people.feg.de (people API)
     * GET /people/:slug <- Details as json
@@ -39,10 +37,10 @@
 * For html loading https://docs.angularjs.org/api/ng/service/$sce
 * htaccess (redirect eg predigten.html > feg-ffb.de/!#predigten)
 * abgualr-svc
-    * plus debug one with mock promises (link in with debug-switch)
+    * plus mock 
 * angualr-templates
 * mark if DEBUG && TEST (small icons top right)
-* config on startup http://jacopretorius.net/2016/09/loading-configuration-data-on-startup-with-angular.html
+
 * add material (bootstrap)
 * manifest
 * Reading progress bar
@@ -90,4 +88,4 @@
 * https://validator.w3.org/nu/?doc=http%3A%2F%2Ffeg-ffb.de%2F
 * https://search.google.com/structured-data/testing-tool#url=feg-ffb.de
 * https://www.leapfroggr.com/seo-checklist/
-* 
+* https://staytus.co/

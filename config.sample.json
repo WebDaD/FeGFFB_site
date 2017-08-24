@@ -10,7 +10,8 @@
     },
     "control": {
         "debug":true,
-        "publish":"test"
+        "publish":"test",
+        "mockapi":true
     },
     "ftp" : {
         "test": {

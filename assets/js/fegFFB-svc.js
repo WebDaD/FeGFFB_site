@@ -6,7 +6,12 @@
         return {
           predigten: function () {
             return $http({
-              method: 'GET', url: 'http://predigten.feg-ffb.de/list.json/'
+              method: 'GET', url: 'http://predigten.feg-ffb.de/'
+            })
+          },
+          predigt: function (slug) {
+            return $http({
+              method: 'GET', url: 'http://predigten.feg-ffb.de/'+slug
             })
           }
         }
