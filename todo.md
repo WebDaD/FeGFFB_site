@@ -34,12 +34,13 @@
 
 * create directives (eg cards, author) https://www.sitepoint.com/practical-guide-angularjs-directives/
 * sitemap
-* For html loading https://docs.angularjs.org/api/ng/service/$sce
 * htaccess (redirect eg predigten.html > feg-ffb.de/!#predigten)
 * abgualr-svc
     * plus mock 
 * angualr-templates
 * mark if DEBUG && TEST (small icons top right)
+
+* subpages -> update title and meta-values
 
 * add material (bootstrap)
 * manifest
@@ -68,7 +69,6 @@
 * multilanguages
 * langauge selector (cookie based)
 
-* logo: auf weißem kreis zusätzlich (zb für android, navbar-brandicon) --> neu generieren
 
 * up: show only when #bottom (create on load) out of screen
     * better mobile view

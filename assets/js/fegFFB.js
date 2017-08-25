@@ -1,6 +1,6 @@
 /* global angular */
 ;(function () {
-  angular.module('fegFFB', ['ngRoute'])
+  angular.module('fegFFB', ['ngRoute', 'ngLazyImage'])
     .config(['$routeProvider', function ($routeProvider) {
       $routeProvider
         .when('/home', {
@@ -73,8 +73,11 @@
           controllerAs: 'ctrl',
           templateUrl: 'templates/404'
         })
-        .otherwise({ 
-          redirectTo: '/404' 
+        .otherwise({
+          redirectTo: '/404'
         })
+    }])
+    .run(['$rootScope', function ($rootScope) {
+      $rootScope.pageTitle = ''
     }])
 }())

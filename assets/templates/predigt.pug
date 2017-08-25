@@ -1,20 +1,32 @@
 .spinner(ng-show="ctrl.loading")
-div(ng-show="!ctrl.loading")
-    // Image (Full Width)
-    h1 {{ctrl.predigt.title}}
-    // date, preacher
-    // audio player
-    div(ng-bind-html="ctrl.predigt.intro")
+#wrapper(ng-show="!ctrl.loading")
+    lazy-image(source="ctrl.predigt.bigImage" placeholder="ctrl.predigt.placeholder")
+    h1.title {{ctrl.predigt.title}}
+    date-author(date="ctrl.predigt.date" author="ctrl.predigt.preacher")
+    audio(controls data-ng-src="ctrl.predigt.mp3")
+    .intro(ng-bind-html="ctrl.predigt.intro")
     hr
     .col-md-6
-        // data here (as table)
+        table.table.table-condensed
+            tr
+                th Prediger
+                td {{ctrl.predigt.preacher.name}}
+            tr
+                th Thema
+                td {{ctrl.predigt.title}}
+            tr
+                th Datum
+                td {{ctrl.predigt.date  | date : 'dd.MM.YYYY'}}
+            tr
+                th Bibelstelle
+                td {{ctrl.predigt.bible.code}}
     .col-md-6
-        // preacher image big
+        lazy-image(source="ctrl.predigt.preacher.image" placeholder="ctrl.predigt.preacher.placeholder")
     h2 Lesung
-    div(ng-bind-html="ctrl.predigt.bible.text")
+    .lesung(ng-bind-html="ctrl.predigt.bible.text")
     hr
     h2 Text
-    div(ng-bind-html="ctrl.predigt.text")
+    .text(ng-bind-html="ctrl.predigt.text")
     hr
     // tags
     // related

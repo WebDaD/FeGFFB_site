@@ -41,7 +41,7 @@ html(lang='de', ng-app='feGFFB')
     meta(name="yandex-verification", content=keys.yandex)
     meta(name="google-site-verification", content=keys.google)
     meta(name="msvalidate.01" content=keys.bing)
-    title #{data.title.short}
+    title(ng-bind=data.title.short+"pageTitle") #{data.title.short}
   body(itemscope itemtype="http://schema.org/Organization")
     a#up.btn.btn-default.btn-lg.no-print(href="#top" title="Back to Top")
       i.fa.fa-arrow-up(aria-hidden="true")
@@ -99,6 +99,7 @@ html(lang='de', ng-app='feGFFB')
       script(src='js/angular-route.min.js')
       script(src='js/angular-sanitize.js')
       script(src='js/ui-bootstrap-tpls.min.js')
+      script(src='js/angular.lazyimage.min.js')
       script(src='js/fegFFB.js')
       if control.mockapi
         script(src='js/fegFFB-svc-mock.js')

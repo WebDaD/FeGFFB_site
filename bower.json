@@ -24,6 +24,7 @@
     "angular-bootstrap": "*",
     "angular-route": "*",
     "angular-sanitize": "*",
-    "offline":"*"
+    "offline":"*",
+    "angular-lazy-image":"*"
   }
 }

@@ -54,6 +54,7 @@ cp bower_components/angular/angular.min.js public/js/angular.min.js
 cp bower_components/angular-route/angular-route.min.js public/js/angular-route.min.js
 cp bower_components/angular-sanitize/angular-sanitize.js public/js/angular-sanitize.js
 cp bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js public/js/ui-bootstrap-tpls.min.js
+cp bower_components/angular-lazy-image/build/angular.lazyimage.min.js public/js/angular.lazyimage.min.js
 echo 'OK'
 
 echo -n "Combine and Minify JS..."
