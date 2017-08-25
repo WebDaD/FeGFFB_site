@@ -1,4 +1,8 @@
 #!/bin/bash
+if ! type "uglifyjs-folder" > /dev/null; then
+  echo '==> uglifyjs-folder not installed, installing'
+  npm install -g uglifyjs-folder
+fi
 if ! type "json" > /dev/null; then
   echo '==> json not installed, installing'
   npm install -g json
@@ -9,6 +13,7 @@ mkdir -p public/images
 mkdir -p public/fonts
 mkdir -p public/css
 mkdir -p public/js
+mkdir -p public/js/controllers
 mkdir -p public/php
 mkdir -p public/templates
 mkdir -p tmp
@@ -58,7 +63,11 @@ cp bower_components/angular-lazy-image/build/angular.lazyimage.min.js public/js/
 echo 'OK'
 
 echo -n "Combine and Minify JS..."
-uglifyjs public/js/* public/js/controllers/* -o public/js/js.min.js
+uglifyjs-folder public/js -o public/js/all.min.js
+uglifyjs-folder public/js/controllers/ -o public/js/controllers.min.js
+uglifyjs public/js/all.min.js public/js/controllers.min.js -o public/js/js.min.js
+rm public/js/all.min.js
+rm public/js/controllers.min.js
 echo 'OK'
 
 
@@ -80,8 +89,8 @@ PHP_CONFIG_CAPTCHA=$(json -f config.json gCaptcha.server | sed -e 's/\n//g')
 sed 's/%%%gCaptchaServerSecret%%%/$PHP_CONFIG_CAPTCHA/' public/php/config.php
 echo 'OK'
 
-echo -n "Copy  maintainance..."
-pug maintainance.pug -o public/
+echo -n "Copy  app_offline.htm..."
+cp app_offline.htm public/app_offline.htm
 echo 'OK'
 
 echo -n "Copy htaccess..."
@@ -103,7 +112,7 @@ echo 'OK'
 rm -rf tmp
 
 PUBLISH=$(json -f config.json control.publish | sed -e 's/\n//g')
-if [ $PUBLISH == "test"]
+if [ "$PUBLISH" == "test" ]
 then
   FTP_HOST=$(json -f config.json ftp.test.host | sed -e 's/\n//g')
   FTP_PORT=$(json -f config.json ftp.test.port | sed -e 's/\n//g')
@@ -114,7 +123,7 @@ then
   lftp -e "mirror -R --recursion=always --transfer-all public/ $FTP_DIR" -p $FTP_PORT -u $FTP_USER,$FTP_PWD $FTP_HOST
   echo 'Done'
 fi
-if [ $PUBLISH == "live"]
+if [ "$PUBLISH" == "live" ]
 then
   FTP_HOST=$(json -f config.json ftp.live.host | sed -e 's/\n//g')
   FTP_PORT=$(json -f config.json ftp.live.port | sed -e 's/\n//g')
@@ -125,7 +134,7 @@ then
   lftp -e "mirror -R --recursion=always --transfer-all public/ $FTP_DIR"  -p $FTP_PORT -u $FTP_USER,$FTP_PWD $FTP_HOST
   echo 'Done'
 fi
-if [ $PUBLISH == "none"]
+if [ "$PUBLISH" == "none" ]
 then
   echo "All Done. Your Website is in the directory 'public'."
 fi

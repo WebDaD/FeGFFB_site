@@ -1,3 +1,7 @@
+BUILD ERROR:
+* index.html
+* php config
+
 (Here only the ones we need)
 * service people.feg.de (people API)
     * GET /people/:slug <- Details as json
