@@ -34,6 +34,5 @@
             i {{tag.name}}{{$last ? '' : ', '}} 
     hr
     h2 Ähnliche Predigten
-    .related
-    // related
+    related-items(ng-items="ctrl.predigt.related")
     // itemscope! (schema.org)

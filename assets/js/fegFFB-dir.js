@@ -11,4 +11,14 @@
       templateUrl: 'templates/dateAuthor.html'
     }
   })
+  angular.module('fegFFB').directive('relatedItems', function () {
+    return {
+      restrict: 'E',
+      scope: {
+        related: '='
+      },
+      replace: 'true',
+      templateUrl: 'templates/relatedItems.html'
+    }
+  })
 })()

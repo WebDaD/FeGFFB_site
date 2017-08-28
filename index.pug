@@ -36,6 +36,7 @@ html(lang='de', ng-app='fegFFB')
     link(rel="shortcut icon", href="images/favicon.ico")
     meta(name="msapplication-config", content="images/browserconfig.xml")
     meta(name="theme-color", content="#900000")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet")
     link(rel='stylesheet', href='css/main.css')
     link(rel="stylesheet", href="css/gutenberg.min.css", media="print")
     meta(name="yandex-verification", content=keys.yandex)
@@ -47,19 +48,19 @@ html(lang='de', ng-app='fegFFB')
       i.fa.fa-arrow-up(aria-hidden="true")
       span.sr-only Back to the Top
     .share-buttons.no-print
-      a.facebook(href="https://www.facebook.com/sharer/sharer.php?u="+data.url target="_blank"  title="Share on Facebook")
+      a.facebook(href="https://www.facebook.com/sharer/sharer.php?u="+data.url+"{{pageSlug}}" target="_blank"  title="Share on Facebook")
         i.fa.fa-facebook(aria-hidden="true")
         span.sr-only Share on Facebook
-      a.mail(href="mailto:?subject="+data.url title="Share by Mail")
+      a.mail(href="mailto:?subject="+data.url+"{{pageSlug}}" title="Share by Mail")
         i.fa.fa-envelope(aria-hidden="true")
         span.sr-only Share by Mail
-      a.twitter(href="https://twitter.com/home?status="+data.url target="_blank" title="Share on Twitter")
+      a.twitter(href="https://twitter.com/home?status="+data.url+"{{pageSlug}}" target="_blank" title="Share on Twitter")
         i.fa.fa-twitter(aria-hidden="true")
         span.sr-only Share on Twitter
-      a.google-plus(href="https://plus.google.com/share?url="+data.url target="_blank" title="Share on Google+")
+      a.google-plus(href="https://plus.google.com/share?url="+data.url+"{{pageSlug}}" target="_blank" title="Share on Google+")
         i.fa.fa-google-plus(aria-hidden="true")
         span.sr-only Share on Google+
-      a.whatsapp.visible-xs-block(href="whatsapp://send?text="+data.url data-action="share/whatsapp/share")
+      a.whatsapp.visible-xs-block(href="whatsapp://send?text="+data.url+"{{pageSlug}}" data-action="share/whatsapp/share")
         i.fa.fa-whatsapp(aria-hidden="true")
         span.sr-only Share with WhatsApp
     nav.navbar.navbar-default.navbar-fixed-top.no-print

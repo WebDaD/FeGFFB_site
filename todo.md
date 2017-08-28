@@ -1,8 +1,10 @@
+# ERROR:
+* uglifyfolder to slow, use other solution
+
 # PREDIGT:
 * Related (image, title) <- directive
-* Better Font (Open Sans, bigger)
-* schema.org
-* share-button-links
+* schema.org http://schema.org/AudioObject
+* ERROR (use slug predigt-error to Test)
 
 # Allgemein
 (Here only the ones we need)
@@ -64,7 +66,7 @@
 * predigten
 * predigt
 * termine
-* termin
+* termin http://schema.org/Event
 * news
 * new
 * about_us (from all the static texts, using headlines and an arcodeion)
@@ -73,9 +75,9 @@
 * losung
 * 404 (search)
 
-* author
+* author http://schema.org/Person
 * tag
-* predigtreihe
+* predigtreihe http://schema.org/Series
 
 * multilanguages
 * langauge selector (cookie based)

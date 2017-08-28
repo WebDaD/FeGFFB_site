@@ -13,6 +13,7 @@
         self.predigt.preacher.placeholder = self.predigt.preacher.image + '?width=50&height=50'
         self.predigt.preacher.image = self.predigt.preacher.image + '?width=' + (self.containerWidth / 2) + '&height=auto'
         $rootScope.pageTitle = ' - Predigt - ' + predigt.title
+        $rootScope.pageSlug = '/predigten/' + predigt.slug
         self.loading = false
       }, function () {
         // TODO: on error: show error and mailing options

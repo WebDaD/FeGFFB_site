@@ -82,6 +82,7 @@
     }])
     .run(['$rootScope', '$location', function ($rootScope, $location) {
       $rootScope.pageTitle = ''
+      $rootScope.pageSlug = ''
       $rootScope.isActive = function (viewLocation) {
         var regex = new RegExp('[/]' + viewLocation + '([/].*)?')
         return $location.path().match(regex) !== null

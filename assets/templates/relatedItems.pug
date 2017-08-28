@@ -1,0 +1,5 @@
+.row.related
+    .col-md-3(ng-repeat="rel in related")
+        a(href="#!predigten/{{rel.slug}}")
+            img.img-responsive(ng-src="{{rel.image}}")
+            span {{rel.title}}
