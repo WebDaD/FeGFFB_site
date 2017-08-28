@@ -1,5 +1,6 @@
-.author.pull-left
-    a(href="#!author/{{author.slug}}") 
-        img.img-responsive.img-circle(ng-src="author.image")
-        span {{author.name}}
-.date.pull-right {{date | date : 'dd.MM.YYYY'}}
+.authorDate
+    .author.pull-left
+        a(href="#!author/{{author.slug}}") 
+            img.img-responsive.img-circle(ng-src="author.image")
+            span {{author.name}}
+    .date.pull-right {{date | date : 'dd.MM.yyyy'}}

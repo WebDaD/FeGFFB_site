@@ -6,7 +6,7 @@
       var slug = $routeParams.slug
       self.loading = true
       fegFFBDataProvider.predigt(slug).then(function (predigt) {
-        self.containerWidth = angular.element(document.getElementById('wrapper')).clientWidth
+        self.containerWidth = document.getElementById('wrapper').clientWidth
         self.predigt = predigt
         self.predigt.bigImage = self.predigt.image + '?width=' + self.containerWidth + '&height=auto'
         self.predigt.placeholder = self.predigt.image + '?width=50&height=50'

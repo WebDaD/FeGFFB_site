@@ -55,11 +55,12 @@ echo -n "Copy JS..."
 cp assets/js/*.js public/js/
 cp assets/js/controllers/*.js public/js/controllers/ 
 cp bower_components/bootstrap/dist/js/bootstrap.min.js public/js/bootstrap.min.js
+cp bower_components/jquery/dist/jquery.min.js public/js/jquery.min.js
 cp bower_components/angular/angular.min.js public/js/angular.min.js
 cp bower_components/angular-route/angular-route.min.js public/js/angular-route.min.js
 cp bower_components/angular-sanitize/angular-sanitize.js public/js/angular-sanitize.js
 cp bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js public/js/ui-bootstrap-tpls.min.js
-cp bower_components/angular-lazy-image/build/angular.lazyimage.min.js public/js/angular.lazyimage.min.js
+cp bower_components/angular-fade-image-loading/angular-fade-image-loading.min.js public/js/angular-fade-image-loading.min.js
 echo 'OK'
 
 echo -n "Combine and Minify JS..."
@@ -86,7 +87,7 @@ echo 'OK'
 
 echo -n "Create php-config..."
 PHP_CONFIG_CAPTCHA=$(json -f config.json gCaptcha.server | sed -e 's/\n//g')
-sed 's/%%%gCaptchaServerSecret%%%/$PHP_CONFIG_CAPTCHA/' public/php/config.php
+sed -i "s/%%%gCaptchaServerSecret%%%/$PHP_CONFIG_CAPTCHA/" public/php/config.php
 echo 'OK'
 
 echo -n "Copy  app_offline.htm..."
@@ -95,6 +96,8 @@ echo 'OK'
 
 echo -n "Copy htaccess..."
 cp .htaccess public/.htaccess
+HTACCESS_REWRITEBASE=$(json -f config.json htaccess.rewritebase | sed -e 's/\n//g')
+sed -i "s|%%%HTACCESS_REWRITEBASE%%%|$HTACCESS_REWRITEBASE|g" public/.htaccess
 echo 'OK'
 
 echo -n "Copy AppCache.manifest..."

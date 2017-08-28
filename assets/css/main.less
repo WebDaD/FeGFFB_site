@@ -5,6 +5,12 @@
 
 body {
   padding-top: 50px;
+  padding-bottom: 100px;
+}
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 50px;
+  }
 }
 /* fitting bg-colos btns */
 .btn-primary {
@@ -79,6 +85,34 @@ p, figcaption, td, li, a, label, .alert {
   word-wrap: normal;
 }
 
+/* navbar brand */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar-brand>img {
+  margin-top: 10px;
+  max-width: 80px;
+}
+
+/* Image Center */
+.preacher-image * img {
+  margin: 0 auto;
+}
+fade-img-loading img {
+  max-width: 100%;
+}
+
+/* Audio Bar 100% */
+audio {
+  width: 100%;
+}
+
+/* tags smaller */
+.tags a i {
+  color: gray;
+  font-size: smaller;
+}
 
 /* Footer */
 footer {
@@ -87,5 +121,12 @@ footer {
   width: 100%;
   padding-top: 10px;
   margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+}
+@media (max-width: 767px) {
+  footer {
+    bottom: 50px;
+  }
 }
 

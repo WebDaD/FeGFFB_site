@@ -1,7 +1,10 @@
-BUILD ERROR:
-* index.html
-* php config
+# PREDIGT:
+* Related (image, title) <- directive
+* Better Font (Open Sans, bigger)
+* schema.org
+* share-button-links
 
+# Allgemein
 (Here only the ones we need)
 * service people.feg.de (people API)
     * GET /people/:slug <- Details as json
@@ -9,6 +12,7 @@ BUILD ERROR:
     * GET /predigten <- List of slugs as json
     * GET /predigten/:slug <- Details as json
     * GET /predigten/latest <- Details as json of newest
+    * GET /predigtreihe/:slug <- List of slugs as json
 * service termine.feg.de
     * GET /termine <- List of slugs as json
     * GET /termine/:slug <- Details as json
@@ -44,7 +48,9 @@ BUILD ERROR:
 * angualr-templates
 * mark if DEBUG && TEST (small icons top right)
 
-* subpages -> update title and meta-values
+* subpages -> update title and meta-values and share-buttons!
+
+
 
 * add material (bootstrap)
 * manifest
@@ -69,6 +75,7 @@ BUILD ERROR:
 
 * author
 * tag
+* predigtreihe
 
 * multilanguages
 * langauge selector (cookie based)

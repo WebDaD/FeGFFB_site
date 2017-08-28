@@ -3,12 +3,12 @@ AddType text/cache-manifest .appcache
 # Rewrite to www
 Options +FollowSymLinks
 RewriteEngine on
+RewriteBase %%%HTACCESS_REWRITEBASE%%%
 # RewriteCond %{HTTP_HOST} ^feg-ffb.de[nc]
 
 # 301 Redirect Files
-Redirect 301 /predigten /index.html#!/predigten
-Redirect 301 /predigt/(.*) /index.html#!/predigten/$1
-Redirect 301 /predigten/(.*) /index.html#!/predigten/$1
+RedirectMatch "/predigten/(.*)" "%%%HTACCESS_REWRITEBASE%%%/index.html#!/predigten/$1"
+RedirectMatch "/predigten/" "%%%HTACCESS_REWRITEBASE%%%/index.html#!/predigten/"
 
 # Maintanance Mode
 # RewriteRule /.* /app_offline.htm [L]

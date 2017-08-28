@@ -1,5 +1,5 @@
 doctype html
-html(lang='de', ng-app='feGFFB')
+html(lang='de', ng-app='fegFFB')
   head
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -28,21 +28,21 @@ html(lang='de', ng-app='feGFFB')
     meta(name='twitter:title', content=data.title.short)
     meta(name='twitter:description', content=data.title.long)
     meta(name='twitter:image', content=data.url+'/images/apple-touch-icon.png')
-    link(rel="apple-touch-icon", sizes="180x180", href="/images/apple-touch-icon.png")
-    link(rel="icon", type="image/png", sizes="32x32", href="/images/favicon-32x32.png")
-    link(rel="icon", type="image/png", sizes="16x16", href="/images/favicon-16x16.png")
-    link(rel="manifest", href="/images/manifest.json")
-    link(rel="mask-icon", href="/images/safari-pinned-tab.svg", color="#990000")
-    link(rel="shortcut icon", href="/images/favicon.ico")
-    meta(name="msapplication-config", content="/images/browserconfig.xml")
+    link(rel="apple-touch-icon", sizes="180x180", href="images/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="images/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="images/favicon-16x16.png")
+    link(rel="manifest", href="images/manifest.json")
+    link(rel="mask-icon", href="images/safari-pinned-tab.svg", color="#990000")
+    link(rel="shortcut icon", href="images/favicon.ico")
+    meta(name="msapplication-config", content="images/browserconfig.xml")
     meta(name="theme-color", content="#900000")
     link(rel='stylesheet', href='css/main.css')
     link(rel="stylesheet", href="css/gutenberg.min.css", media="print")
     meta(name="yandex-verification", content=keys.yandex)
     meta(name="google-site-verification", content=keys.google)
     meta(name="msvalidate.01" content=keys.bing)
-    title(ng-bind=data.title.short+"pageTitle") #{data.title.short}
-  body(itemscope itemtype="http://schema.org/Organization")
+    title #{data.title.short} {{pageTitle}}
+  body
     a#up.btn.btn-default.btn-lg.no-print(href="#top" title="Back to Top")
       i.fa.fa-arrow-up(aria-hidden="true")
       span.sr-only Back to the Top
@@ -50,13 +50,13 @@ html(lang='de', ng-app='feGFFB')
       a.facebook(href="https://www.facebook.com/sharer/sharer.php?u="+data.url target="_blank"  title="Share on Facebook")
         i.fa.fa-facebook(aria-hidden="true")
         span.sr-only Share on Facebook
-      a.mail(href="mailto:?subject=""+data.url title="Share by Mail")
+      a.mail(href="mailto:?subject="+data.url title="Share by Mail")
         i.fa.fa-envelope(aria-hidden="true")
         span.sr-only Share by Mail
       a.twitter(href="https://twitter.com/home?status="+data.url target="_blank" title="Share on Twitter")
         i.fa.fa-twitter(aria-hidden="true")
         span.sr-only Share on Twitter
-      a.google-plus(href="https://plus.google.com/share?url=""+data.url target="_blank" title="Share on Google+")
+      a.google-plus(href="https://plus.google.com/share?url="+data.url target="_blank" title="Share on Google+")
         i.fa.fa-google-plus(aria-hidden="true")
         span.sr-only Share on Google+
       a.whatsapp.visible-xs-block(href="whatsapp://send?text="+data.url data-action="share/whatsapp/share")
@@ -71,38 +71,40 @@ html(lang='de', ng-app='feGFFB')
             span.icon-bar
             span.icon-bar
           a.navbar-brand(href='#!/home')
-            img(src="images/android-chrome-192x192.png" style="width:72px;height:auto;")
-            span #{data.title.short}
+            img(src="images/android-chrome-192x192.png" title=data.title.short alt=data.title.short)
         .collapse.navbar-collapse#navbar
           ul.nav.navbar-nav
-            li(ng-class="{ active: isActive('/predigten')}")
+            li(ng-class="{ active: isActive('predigten')}")
               a(href="#!/predigten") Predigten
-            li(ng-class="{ active: isActive('/termine')}")
+            li(ng-class="{ active: isActive('termine')}")
               a(href="#!/termine") Termine
-            li(ng-class="{ active: isActive('/news')}")
+            li(ng-class="{ active: isActive('news')}")
               a(href="#!/news") News
-            li(ng-class="{ active: isActive('/ueber_uns')}")
+            li(ng-class="{ active: isActive('ueber_uns')}")
               a(href="#!/ueber_uns") Über Uns  
-            li(ng-class="{ active: isActive('/kontakt')}")
+            li(ng-class="{ active: isActive('kontakt')}")
               a(href="#!/kontakt") Kontakt
     .container
       #ng-view(ng-view='')
-      footer.footer.container
-        .col-md-2.col-xs-12
+    footer.footer
+      .container
+        .col-md-2.col-xs-6
           a.btn.btn-link(style='color:white;' href="http://webdad.eu" target="_blank") Powered by WebDaD.eu
-        .col-md-offset-6.col-md-4.col-xs-12
-          a.btn.btn-link(style='color:white;' href="#!/impressum" ng-class="{ active: isActive('/impressum')}") Impressum
-          a.btn.btn-link(style='color:white;' href="#!/datenschutz" ng-class="{ active: isActive('/datenschutz')}") Datenschutzerklärung
+        .col-md-offset-6.col-md-4.col-xs-6
+          a.btn.btn-link(style='color:white;' href="#!/impressum" ng-class="{ active: isActive('impressum')}") Impressum
+          a.btn.btn-link(style='color:white;' href="#!/datenschutz" ng-class="{ active: isActive('datenschutz')}") Datenschutzerklärung
+    script(src='https://www.google.com/recaptcha/api.js')
     if control.debug
+      script(src='js/jquery.min.js')
       script(src='js/bootstrap.min.js')
       script(src='js/angular.min.js')
       script(src='js/angular-route.min.js')
       script(src='js/angular-sanitize.js')
       script(src='js/ui-bootstrap-tpls.min.js')
-      script(src='js/angular.lazyimage.min.js')
+      script(src='js/angular-fade-image-loading.min.js')
       script(src='js/fegFFB.js')
       if control.mockapi
-        script(src='js/fegFFB-svc-mock.js')
+        script(src='js/fegFFB-svc.mock.js')
       else
         script(src='js/fegFFB-svc.js')
       script(src='js/fegFFB-dir.js')
@@ -121,5 +123,4 @@ html(lang='de', ng-app='feGFFB')
       script(src='js/controllers/termine-controller.js')
       script(src='js/controllers/ueber_uns-controller.js')
     else
-      script(src="js/js.min.js")
-    script(src='https://www.google.com/recaptcha/api.js')
+      script(src='js/js.min.js')

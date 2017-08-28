@@ -1,32 +1,39 @@
 .spinner(ng-show="ctrl.loading")
 #wrapper(ng-show="!ctrl.loading")
-    lazy-image(source="ctrl.predigt.bigImage" placeholder="ctrl.predigt.placeholder")
+    fade-img-loading(image="{{ctrl.predigt.bigImage}}" blur="{{ctrl.predigt.placeholder}}")
     h1.title {{ctrl.predigt.title}}
-    date-author(date="ctrl.predigt.date" author="ctrl.predigt.preacher")
-    audio(controls data-ng-src="ctrl.predigt.mp3")
+    audio(controls data-ng-src="{{ctrl.predigt.mp3}}")
     .intro(ng-bind-html="ctrl.predigt.intro")
     hr
-    .col-md-6
-        table.table.table-condensed
-            tr
-                th Prediger
-                td {{ctrl.predigt.preacher.name}}
-            tr
-                th Thema
-                td {{ctrl.predigt.title}}
-            tr
-                th Datum
-                td {{ctrl.predigt.date  | date : 'dd.MM.YYYY'}}
-            tr
-                th Bibelstelle
-                td {{ctrl.predigt.bible.code}}
-    .col-md-6
-        lazy-image(source="ctrl.predigt.preacher.image" placeholder="ctrl.predigt.preacher.placeholder")
+    .row
+        .col-md-6
+            table.table.table-condensed.table-hover
+                tr
+                    th Prediger
+                    td 
+                        a(href="#!author/{{ctrl.predigt.preacher.name}}") {{ctrl.predigt.preacher.name}}
+                tr(ng-show="ctrl.predigt.series")
+                    th Reihe
+                    td
+                        a(href="#!predigtreihe/{{ctrl.predigt.series.slug}}") {{ctrl.predigt.series.name}}
+                tr
+                    th Datum
+                    td {{ctrl.predigt.date  | date : 'dd.MM.yyyy'}}
+                tr
+                    th Bibelstelle
+                    td {{ctrl.predigt.bible.nicecode}}
+        .col-md-6.preacher-image
+            fade-img-loading(image="{{ctrl.predigt.preacher.image}}" blur="{{ctrl.predigt.preacher.placeholder}}")
     h2 Lesung
     .lesung(ng-bind-html="ctrl.predigt.bible.text")
     hr
     h2 Text
     .text(ng-bind-html="ctrl.predigt.text")
+    .tags
+        a(ng-repeat="tag in ctrl.predigt.tags" ng-href="#!tag/{{tag.slug}}")
+            i {{tag.name}}{{$last ? '' : ', '}} 
     hr
-    // tags
+    h2 Ähnliche Predigten
+    .related
     // related
+    // itemscope! (schema.org)
