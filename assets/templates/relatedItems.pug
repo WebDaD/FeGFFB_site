@@ -1,5 +1,5 @@
 .row.related
-    .col-md-3(ng-repeat="rel in related")
+    .col-md-4(ng-repeat="rel in items")
         a(href="#!predigten/{{rel.slug}}")
-            img.img-responsive(ng-src="{{rel.image}}")
-            span {{rel.title}}
+            img.img-responsive(ng-src="{{rel.image}}" style="margin:0 auto,")
+            span.text-center(style="width:100%;display:block;") {{rel.title}}

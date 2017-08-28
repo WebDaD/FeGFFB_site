@@ -15,7 +15,7 @@
     return {
       restrict: 'E',
       scope: {
-        related: '='
+        items: '='
       },
       replace: 'true',
       templateUrl: 'templates/relatedItems.html'

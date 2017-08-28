@@ -10,7 +10,7 @@
     },
     "control": {
         "debug":true,
-        "publish":"test",
+        "publish":"none",
         "mockapi":true
     },
     "ftp" : {
@@ -28,6 +28,9 @@
             "password":"",
             "directoy":"/"
         }
+    },
+    "htaccess": {
+        "rewritebase":"/fegffb"
     },
     "data": {
         "url":"http://test.feg-ffb.de",
