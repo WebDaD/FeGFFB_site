@@ -5,6 +5,13 @@
 * Related (image, title) <- directive
 * schema.org http://schema.org/AudioObject
 * ERROR (use slug predigt-error to Test)
+* htaccess all
+* progress bar
+* print button
+
+# Design
+* http://www.baseline-type.com/
+* add material (bootstrap)
 
 # Allgemein
 (Here only the ones we need)
@@ -43,7 +50,7 @@
 
 
 * create directives (eg cards, author) https://www.sitepoint.com/practical-guide-angularjs-directives/
-* sitemap
+* sitemap (dynamic)
 * htaccess (redirect eg predigten.html > feg-ffb.de/!#predigten)
 * abgualr-svc
     * plus mock 
@@ -52,9 +59,11 @@
 
 * subpages -> update title and meta-values and share-buttons!
 
+* AMP Links and renders
+    * Linked from htaccess
+    * rendered
 
 
-* add material (bootstrap)
 * manifest
 * Reading progress bar
 * Button print
@@ -91,6 +100,8 @@
 * RSS-Feed (combines other feeds) https://gist.github.com/smajda/204194
     * https://blog.feedly.com/10-ways-to-optimize-your-feed-for-feedly/
 * offline
+
+* admin page: https://uxdesign.cc/design-better-forms-96fadca0f49c
 
 * keys from old site
 * pagespeed insights
